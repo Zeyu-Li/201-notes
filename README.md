@@ -181,7 +181,7 @@ add sign bit 0: 0 10000101 101111 00011100 ...
 #define one 1
 ```
 
-This is called a macro and will replace every instance of `one` with `1` literally. Think of this as a find and replace 
+This is called a macro and will replace every instance of `one` with `1` literally. Think of this as a find and replace (with spaces on both sides) excluding strings
 
 ```c 
 #typedef int Bool;
@@ -330,6 +330,96 @@ Preprocessor expressions include
 
 * include pastes the library/package into the current code
 * see [defines](#defines)
+* defines ignores strings when it is a function 
+
+```c
+#define MK_ID(n) i##n
+
+int MK_ID(1), MK_ID(2);
+// becomes
+int i1, i2;
+```
+
+**Data types**
+
+* struct - collection of objects (object like)
+* unions - size of largest type member
+* enum - set of items like a select one in dropdown
+
+### Week 10
+
+**Header file**
+
+one c file can have a header file usually of cfilename.h where definitions reside
+
+**Makefiles**
+
+\* note very similar to shell script
+
+* First line provides target and dependencies
+* 2nd is the excution script
+* *note second line has a leading tab
+* clean can also be included to remove intermediates and excutables
+
+### Week 11
+
+Reading Week
+
+### Week 12
+
+Review 2
+
+**Low level programming**
+
+* Bitwise operators of << and >>
+* Logic operators of ~, &, ^, |
+  * ~ - not, flips all bits
+  * & - add (see add truth table)
+  * | - or
+  * ^ - xor (also known as exclusive or)
+
+### Week 13
+
+linux `time` command
+
+#### Keywords
+
+**static**
+
+* static storage inside block
+* Otherwise a internal linkage
+
+**extern**
+
+* share across multiple files
+
+**register**
+
+* stores in register (faster than memory)
+
+**const**
+
+* read only (ie immutable, not immutable)
+
+`auto` is also a keyword but no one uses it in C, however in C++, it has changed to implied type
+
+### Week 14
+
+Review 3
+
+Intro to C++ (can be ignored)
+
+#### My options on C++
+
+Much better than C especially with the STL including many popular alg and data structures like Stack, Queue, and more (see https://www.geeksforgeeks.org/the-c-standard-template-library-stl/)
+
+But better memory management and quicker to right readable code for recent version of C++, ie with `auto`, ranged based for loops, classes, and more
+
+\* note c can be incorporated into a cpp program
+
+### Week 15
+
+Review 4?
 
 ## Quizzes
 
