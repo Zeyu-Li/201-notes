@@ -1,5 +1,7 @@
 # CMPUT 201 Notes
 
+<a name="top"></a>
+
 ## Disclaimer
 
 This course by the U of A was taken during the 2020 quarantine and therefore may not be a true representation of a normal 201 class. People from previous years have claimed that topics such as dp (dynamic programming), greedy, graphs, and others were explored but Dr. Lin Guo-Hui did not really explore these topics. 
@@ -173,6 +175,8 @@ add sign bit 0: 0 10000101 101111 00011100 ...
 
 **Type def**
 
+<a name="defines"></a>
+
 ```c
 #define one 1
 ```
@@ -229,6 +233,104 @@ definition of main
 definitions of other functions
 ```
 
+### Week 6
+
+**Pointers!**
+
+* Pointers are unsigned long int that is the address to the memory value
+
+* Therefore can be passed by
+* Address operator (&) and dereference operator (*)
+* dereference operator returns the value of the memory address
+* arrays are like pointers
+* pointers can be incremented or decremented
+
+Therefore looping through array with pointers
+
+```c
+int sum = 0;
+for (p = &a[0]; p < &a[10]; p++) {
+    sum+=*p;
+}
+```
+
+\*note *p++ = *(p++)
+
+**gdb**
+
+A debugger
+
+### Week 7
+
+Review 1
+
+### Week 8
+
+**Strings!**
+
+`'\0'` is the null char and signified the end of a string
+
+Strings can be char arrays `char a[]` or char pointer `char *a`
+
+*Note no string type like C++ :sob:
+
+**IO**
+
+* scanf skips leading white spaces and reads characters until a white space is encountered
+
+string lib has lots of string functions like 
+
+* strcpy - copies 1 string to another
+* strlen - len of string
+* strcat - concates the first string with the second string (the first string is the final string)
+* strcmp - compares 2 strings
+
+**Memory**
+
+within `<stdlib.h>` there exist 3 important memory allocation function
+
+```
+malloc() /* allocates a block of memory, no initialization */
+calloc() /* allocates a block of memory, clears it */
+realloc() /* resizes a previously allocated block of memory */
+```
+
+They all return the pointer to the first byte
+
+(make sure you check to see if it is NULL incase it fails to alloc memory)
+
+Also make sure to free memory at the end with the `free()` function as c does not manage your memory
+
+**Linked list**
+
+See https://www.geeksforgeeks.org/linked-list-set-1-introduction/ or https://github.com/Zeyu-Li/c_linked_list
+
+**Function pointers**
+
+```c
+void sort(void (*pf)(int *, int, int), int *array, int i, int j) {
+	pf(array, i, j);
+	return;
+}
+```
+
+### Week 9
+
+**Preprocessor**
+
+These events happen at compile time and changes the code in intermediate step
+
+Preprocessor expressions include
+
+```
+#include
+#define
+#if, #ifdef, #ifndef, #elif, #else, #endif
+```
+
+* include pastes the library/package into the current code
+* see [defines](#defines)
+
 ## Quizzes
 
 Online 20 min quizzes with 15 question open book. 
@@ -252,3 +354,7 @@ There are two assignments that take plenty of time and are only worth bonus mark
 ## Final
 
 1 two sided piece on paper as cheat sheet
+
+
+
+[:top: Back to Top](#top)
