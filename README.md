@@ -237,7 +237,7 @@ definitions of other functions
 
 **Pointers!**
 
-* Pointers are unsigned long int that is the address to the memory value
+* Pointers are **unsigned long int** that is the address to the memory value
 
 * Therefore can be passed by
 * Address operator (&) and dereference operator (*)
@@ -258,7 +258,7 @@ for (p = &a[0]; p < &a[10]; p++) {
 
 **gdb**
 
-A debugger
+A debugger, see https://www.geeksforgeeks.org/gdb-step-by-step-introduction/
 
 ### Week 7
 
@@ -289,7 +289,7 @@ string lib has lots of string functions like
 
 within `<stdlib.h>` there exist 3 important memory allocation function
 
-```
+```c
 malloc() /* allocates a block of memory, no initialization */
 calloc() /* allocates a block of memory, clears it */
 realloc() /* resizes a previously allocated block of memory */
@@ -322,7 +322,7 @@ These events happen at compile time and changes the code in intermediate step
 
 Preprocessor expressions include
 
-```
+```c
 #include
 #define
 #if, #ifdef, #ifndef, #elif, #else, #endif
@@ -357,9 +357,9 @@ one c file can have a header file usually of cfilename.h where definitions resid
 \* note very similar to shell script
 
 * First line provides target and dependencies
-* 2nd is the excution script
+* 2nd is the execution script
 * *note second line has a leading tab
-* clean can also be included to remove intermediates and excutables
+* clean can also be included to remove intermediates and executables
 
 ### Week 11
 
@@ -380,7 +380,7 @@ Review 2
 
 ### Week 13
 
-linux `time` command
+* linux `time` command
 
 #### Keywords
 
