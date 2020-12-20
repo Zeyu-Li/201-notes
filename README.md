@@ -443,7 +443,7 @@ There are two assignments that take plenty of time and are only worth bonus mark
 
 ## Final
 
-1 two sided piece on paper as cheat sheet
+1 two sided piece on paper as cheat sheet. ~40 MC and 10 short answer. 
 
 
 
